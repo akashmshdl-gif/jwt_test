@@ -54,12 +54,12 @@ function loadJwksFromFile() {
 let cachedJwks;
 
 async function getJwks() {
-  if (cachedJwks) return cachedJwks;
-  if (JWKS_JSON_PATH) {
-    cachedJwks = loadJwksFromFile();
-  } else {
+  // if (cachedJwks) return cachedJwks;
+  // if (JWKS_JSON_PATH) {
+  //   cachedJwks = loadJwksFromFile();
+  // } else {
     cachedJwks = await buildJwksFromPem();
-  }
+  // }
   return cachedJwks;
 }
 
